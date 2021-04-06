@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.link {
+  text-decoration: none;
+  display: block;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}

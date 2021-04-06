@@ -1,0 +1,47 @@
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--secondary-text-color);
+  cursor: pointer;
+}
+.icon-close-black-18dp-2-1 {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+// старый код целиком
+
+@media screen and (min-width: 1200px) {
+  .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--secondary-text-color);
+    cursor: pointer;
+  }
+  .icon-close-black-18dp-2-1 {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+}

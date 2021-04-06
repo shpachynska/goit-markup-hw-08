@@ -1,0 +1,61 @@
+.logo {
+  @extend %link;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  color: var(--accent-color);
+  width: 134px;
+  .navigation & {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  &_theme-light {
+    color: var(--black-logo-color);
+    margin-bottom: 20px;
+  }
+  &_theme-dark {
+    color: var(--secondary-text-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .footer .logo {
+    width: 154px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+// старый код целиком
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color);
+    text-align: left;
+    .navigation & {
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
+    &_theme-light {
+      color: var(--black-logo-color);
+      margin-bottom: 0;
+    }
+    &_theme-dark {
+      color: var(--secondary-text-color);
+    }
+    .footer & {
+      width: 145px;
+      padding-bottom: 20px;
+    }
+  }
+}

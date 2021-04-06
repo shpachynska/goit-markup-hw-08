@@ -1,0 +1,109 @@
+.feature-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+}
+.feature-list {
+  margin-left: -30px;
+  margin-top: -30px;
+  &__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 450px;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+  &__thumb {
+    display: flex;
+    background-color: var(--light-background);
+    margin-bottom: 30px;
+    border-radius: 4px;
+    width: 450px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+// старый код целиком
+
+@media screen and (min-width: 1200px) {
+  .feature-section {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+    &__item {
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc(100% / 4 - 30px);
+      max-width: 270px;
+    }
+    &__thumb {
+      display: flex;
+      background-color: var(--light-background);
+      margin-bottom: 30px;
+      border-radius: 4px;
+      width: 270px;
+      height: 120px;
+      align-items: center;
+      justify-content: center;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      text-transform: uppercase;
+      color: var(--title-color);
+      margin-bottom: 10px;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 1.71;
+    }
+  }
+}
