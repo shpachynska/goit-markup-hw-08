@@ -405,6 +405,8 @@ body {
 
 .hero {
   max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero__overlay {
@@ -455,6 +457,7 @@ body {
   .hero__title {
     font-size: 26px;
     line-height: 1.36;
+    width: 360px;
   }
 }
 
