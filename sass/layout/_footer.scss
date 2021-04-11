@@ -3,13 +3,17 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.address-wrapper {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.social-wrapper {
-  margin-bottom: 60px;
+@media screen and (min-width: 320px) {
+  .address-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .social-wrapper {
+    margin-bottom: 60px;
+  }
+  .footer-form-wrapper {
+    text-align: center;
+  }
 }
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
