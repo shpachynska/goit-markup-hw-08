@@ -39,6 +39,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="menu-button" data-menu-button>
+          <svg class="menu-icon">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
         <ul class="header-contacts list">
           <li class="header-contacts__item">
             <a
@@ -58,6 +63,52 @@
               </svg>
               +38 096 111 11 11</a
             >
+          </li>
+        </ul>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <button type="button" class="mobile-menu__close-button" data-menu-close>
+          <svg class="mobile-menu__close-icon">
+            <use href="./images/icons.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link link">Студия</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="mobile-menu__link link current"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts list">
+          <li class="mobile-menu__contacts-item">
+            <a class="mobile-menu__tel link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-menu__contacts-item">
+            <a class="mobile-menu__mail link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">Instagram</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">Twitter</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">Facebook</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -98,12 +149,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img1.jpg"
-                    alt="экран ноутбука с фотографиями"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/techno-dt.jpg    1x,
+                        ./images/portfolio/techno-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/techno-tb.jpg    1x,
+                        ./images/portfolio/techno-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/techno-mb.jpg    1x,
+                        ./images/portfolio/techno-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img1.jpg"
+                      alt="экран ноутбука с фотографиями"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title">Технокряк</h3>
@@ -119,12 +192,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img2.jpg"
-                    alt="плакат с баскетболистами"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/orlean-dt.jpg    1x,
+                        ./images/portfolio/orlean-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/orlean-tb.jpg    1x,
+                        ./images/portfolio/orlean-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/orlean-mb.jpg    1x,
+                        ./images/portfolio/orlean-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img2.jpg"
+                      alt="плакат с баскетболистами"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title">
@@ -142,12 +237,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img3.jpg"
-                    alt="логотип ресторана"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-dt.jpg    1x,
+                        ./images/portfolio/seafood-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-tb.jpg    1x,
+                        ./images/portfolio/seafood-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-mb.jpg    1x,
+                        ./images/portfolio/seafood-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img3.jpg"
+                      alt="логотип ресторана"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title">Ресторан Seafood</h3>
@@ -163,12 +280,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img4.jpg"
-                    alt="изображение наушников"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-dt.jpg    1x,
+                        ./images/portfolio/prime-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-tb.jpg    1x,
+                        ./images/portfolio/prime-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-mb.jpg    1x,
+                        ./images/portfolio/prime-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img4.jpg"
+                      alt="изображение наушников"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title">Проект Prime</h3>
@@ -184,12 +323,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img5.jpg"
-                    alt="две коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-dt.jpg    1x,
+                        ./images/portfolio/boxes-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-tb.jpg    1x,
+                        ./images/portfolio/boxes-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-mb.jpg    1x,
+                        ./images/portfolio/boxes-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img5.jpg"
+                      alt="две коробки"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title">Проект Boxes</h3>
@@ -205,12 +366,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img6.jpg"
-                    alt="монитор с открытым веб-сайтом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-dt.jpg    1x,
+                        ./images/portfolio/inspiration-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-tb.jpg    1x,
+                        ./images/portfolio/inspiration-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-mb.jpg    1x,
+                        ./images/portfolio/inspiration-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img6.jpg"
+                      alt="монитор с открытым веб-сайтом"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title" lang="en">
@@ -228,12 +411,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img7.jpg"
-                    alt="открытый журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-dt.jpg    1x,
+                        ./images/portfolio/limited-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-tb.jpg    1x,
+                        ./images/portfolio/limited-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-mb.jpg    1x,
+                        ./images/portfolio/limited-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img7.jpg"
+                      alt="открытый журнал"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title">Издание Limited Edition</h3>
@@ -249,12 +454,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img8.jpg"
-                    alt="изображение этикетки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/lab-dt.jpg    1x,
+                        ./images/portfolio/lab-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/lab-tb.jpg    1x,
+                        ./images/portfolio/lab-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/lab-mb.jpg    1x,
+                        ./images/portfolio/lab-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img8.jpg"
+                      alt="изображение этикетки"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title">Проект LAB</h3>
@@ -270,12 +497,34 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    src="./images/port-img9.jpg"
-                    alt="человек работает за ноутбуком"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-dt.jpg    1x,
+                        ./images/portfolio/growing-dt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-tb.jpg    1x,
+                        ./images/portfolio/growing-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-mb.jpg    1x,
+                        ./images/portfolio/growing-mb@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/port-img9.jpg"
+                      alt="человек работает за ноутбуком"
+                    />
+                  </picture>
                 </div>
                 <div class="description">
                   <h3 class="description__title" lang="en">Growing Business</h3>
@@ -293,7 +542,7 @@
           <a class="logo link" href=""
             >Web<span class="logo_theme-dark">Studio</span></a
           >
-          <address class="address">
+          <address class="address link">
             <a
               class="address__link link"
               href="https://goo.gl/maps/eJnjtSwa8JkkHzw99"
@@ -310,28 +559,28 @@
         <div class="social-wrapper">
           <b class="join-text">ПРИСОЕДИНЯЙТЕСЬ</b>
           <ul class="social-list list">
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-instagram-2"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-twitter-1"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-facebook-1"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-linkedin-1"></use>
@@ -359,5 +608,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

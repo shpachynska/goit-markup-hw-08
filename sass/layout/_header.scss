@@ -1,67 +1,132 @@
 .header {
-  position: relative;
+  border-bottom: 1px solid #ececec;
+}
+@media screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
+
+  .header-contacts {
+    display: none;
+  }
 }
 
-.navigation {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
+.menu-button,
+.mobile-menu__close-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.mobile-menu__close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
-// .menu-button {
-//   display: inline-flex;
-//   margin: 0;
-//   padding: 0;
-//   width: 40px;
-//   height: 40px;
-//   background-color: transparent;
-//   border: none;
-// }
-// .menu-button .icon-cross {
-//   display: none;
-// }
-
-// .menu-button.is-open .icon-cross {
-//   display: block;
-// }
-// .menu-button.is-open .icon-menu {
-//   display: none;
-// }
-// .menu-container {
-//   display: none;
-//   position: absolute;
-//   top: 0;
-//   width: 100%;
-//   left: 0;
-//   height: 796px;
-//   background-color: rgba($color: #000000, $alpha: 0.2);
-//   &.is-open {
-//     display: block;
-//   }
-// }
-
-.nav-list {
-  display: none;
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  fill: black;
 }
 
-.header-contacts {
-  display: none;
+.mobile-menu__close-icon {
+  height: 40px;
+  width: 40px;
 }
 
-.icon-envelope,
-.icon-smartphone {
+.mobile-menu {
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  // max-width: 480px;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: white;
+  transform: translateY(-100%) translateX(-50%);
+  transition: transform 250ms linear;
+}
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) translateX(-50%);
+}
+.mobile-menu__list {
+  margin-bottom: 302px;
+}
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-menu__link,
+.mobile-menu__tel,
+.mobile-menu__mail {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  text-align: left;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.current {
+  color: var(--accent-color);
+}
+.mobile-menu__tel {
+  font-size: 34px;
+  color: var(--accent-color);
+  margin-bottom: 32px;
+}
+.mobile-menu__contacts {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__mail {
+  font-size: 34px;
+  color: var(--main-text-color);
+}
+.mobile-social-list {
+  display: flex;
+}
+.mobile-social-list__link {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.mobile-social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
   margin-right: 10px;
-  fill: currentColor;
 }
 
 @media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .nav-list {
     display: flex;
     margin-left: 88px;
-    justify-content: space-between;
   }
   .nav-list__link {
-    color: var(--title-color);
     position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -79,95 +144,11 @@
   .nav-list__link,
   .header-contacts__mail,
   .header-contacts__tel {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .current {
-    color: var(--accent-color);
-  }
-  .current::after {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--accent-color);
-    border-radius: 2px;
-  }
-  .header-contacts {
-    display: flex;
-    margin-left: auto;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .header-contacts__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-
-  .header-contacts__mail,
-  .header-contacts__tel {
-    color: var(--main-text-color);
-    display: flex;
-    align-items: center;
-  }
-  .header-contacts__mail:hover,
-  .header-contacts__tel:hover,
-  .header-contacts__mail:focus,
-  .header-contacts__tel:focus {
-    color: var(--accent-color);
-  }
-  .icon-envelope,
-  .icon-smartphone {
-    margin-right: 10px;
-    fill: currentColor;
-  }
-}
-
-// старый код целиком
-
-@media screen and (min-width: 1200px) {
-  .header {
-    border-bottom: 1px solid #ececec;
-  }
-
-  .navigation {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-list {
-    display: flex;
-    margin-left: 93px;
-  }
-
-  .nav-list__item {
-    position: relative;
-  }
-
-  .nav-list__link {
-    position: relative;
-  }
-
-  .nav-list__link:hover,
-  .nav-list__link:focus {
-    color: var(--accent-color);
-  }
-
-  .nav-list__link,
-  .header-contacts__mail,
-  .header-contacts__tel {
     color: var(--title-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-bottom: 32px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .current {
@@ -188,12 +169,11 @@
   .header-contacts {
     display: flex;
     margin-left: auto;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .header-contacts__item:not(:last-child) {
-    margin-right: 30px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   .header-contacts__mail,
@@ -202,9 +182,50 @@
     display: flex;
     align-items: center;
   }
+
+  .header-contacts__mail:hover,
+  .header-contacts__tel:hover,
+  .header-contacts__mail:focus,
+  .header-contacts__tel:focus {
+    color: var(--accent-color);
+  }
   .icon-envelope,
   .icon-smartphone {
     margin-right: 10px;
     fill: currentColor;
+  }
+  .icon-smartphone {
+    height: 14px;
+    width: 10px;
+  }
+  .icon-envelope {
+    height: 10px;
+    width: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-list {
+    margin-left: 93px;
+  }
+
+  .nav-list__item {
+    position: relative;
+  }
+
+  .header-contacts {
+    align-items: center;
+    flex-direction: row;
+  }
+  .header-contacts__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .icon-smartphone {
+    height: 16px;
+  }
+  .icon-envelope {
+    height: 10px;
+    width: 14px;
   }
 }

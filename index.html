@@ -25,19 +25,6 @@
           <a class="logo link" href=""
             >Web<span class="logo_theme-light">Studio</span></a
           >
-          <!-- <button type="button" class="menu-button is-open">
-            <svg width="40" height="40">
-              <use
-                class="icon-cross"
-                href="./images/icons.svg#icon-close_40px"
-              ></use>
-              <use
-                class="icon-menu"
-                href="./images/icons.svg#icon-menu_40px"
-              ></use>
-            </svg>
-          </button>
-          <div class="menu-container is-open">контент</div> -->
           <ul class="nav-list list">
             <li class="nav-list__item">
               <a class="nav-list__link current link" href="./index.html"
@@ -54,6 +41,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="menu-button" data-menu-button>
+          <svg class="menu-icon">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
         <ul class="header-contacts list">
           <li class="header-contacts__item">
             <a
@@ -73,6 +65,55 @@
               </svg>
               +38 096 111 11 11</a
             >
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <button type="button" class="mobile-menu__close-button" data-menu-close>
+          <svg class="mobile-menu__close-icon">
+            <use href="./images/icons.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link link current"
+              >Студия</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="mobile-menu__link link"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts list">
+          <li class="mobile-menu__contacts-item">
+            <a class="mobile-menu__tel link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-menu__contacts-item">
+            <a class="mobile-menu__mail link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">Instagram</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">Twitter</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">Facebook</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="" class="mobile-social-list__link link">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -152,37 +193,63 @@
           <ul class="service-list list">
             <li class="service-list__item">
               <div class="service-list__thumb">
-                <img
-                  class="service-list__image"
-                  src="./images/box_1.jpg"
-                  alt="набор текста на клавиатуре перед монитором"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <!-- <source
+                    srcset="
+                      ./images/services/dt-apps.webp    1x,
+                      ./images/services/dt-apps@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  /> -->
+                  <img
+                    class="service-list__image"
+                    src="./images/services/dt-apps.jpg"
+                    alt="мастер бреет бороду клиенту"
+                  />
+                </picture>
                 <p class="service-list__label">Десктопные приложения</p>
               </div>
             </li>
             <li class="service-list__item">
               <div class="service-list__thumb">
-                <img
-                  class="service-list__image"
-                  src="./images/box_2.jpg"
-                  alt="человек со смартфоном перед ноутбуком"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <!-- <source
+                    srcset="
+                      ./images/services/dt-apps.webp    1x,
+                      ./images/services/dt-apps@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  /> -->
+                  <img
+                    class="service-list__image"
+                    src="./images/services/mb-apps.jpg"
+                    alt="человек со смартфоном перед ноутбуком"
+                  />
+                </picture>
+
                 <p class="service-list__label">Мобильные приложения</p>
               </div>
             </li>
             <li class="service-list__item">
               <div class="service-list__thumb">
-                <img
-                  class="service-list__image"
-                  src="./images/box_3.jpg"
-                  alt="планшет с палитрой цветов на экране"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <!-- <source
+                    srcset="
+                      ./images/services/dt-apps.webp    1x,
+                      ./images/services/dt-apps@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  /> -->
+                  <img
+                    class="service-list__image"
+                    src="./images/services/solutions.jpg"
+                    alt="планшет с палитрой цветов на экране"
+                  />
+                </picture>
+
                 <p class="service-list__label">Дизайнерские решения</p>
               </div>
             </li>
@@ -193,41 +260,66 @@
       <!-- TEAM -->
       <section class="team-section">
         <div class="container">
-          <h2 class="section-title">Наша команда</h2>
+          <div class="team-title">
+            <h2 class="section-title">Наша команда</h2>
+          </div>
+
           <ul class="team-list list">
             <li class="team-list__item">
-              <img
-                src="./images/demyanenko.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/demyanenko-dt.jpg    1x,
+                    ./images/team/demyanenko-dt@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/demyanenko-tb.jpg    1x,
+                    ./images/team/demyanenko-tb@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/demyanenko-mobile.jpg    1x,
+                    ./images/team/demyanenko-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-list__image"
+                  src="./images/team/demyanenko-mobile.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="name-card">
                 <h3 class="name-card__name">Игорь Демьяненко</h3>
                 <p lang="en" class="name-card__title">Product Designer</p>
                 <ul class="social-list list">
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-instagram-2"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-linkedin-1"></use>
@@ -238,38 +330,61 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/repina.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/repina-dt.jpg    1x,
+                    ./images/team/repina-dt@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/repina-tb.jpg    1x,
+                    ./images/team/repina-tb@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/repina-mb.jpg    1x,
+                    ./images/team/repina-mb@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-list__image"
+                  src="./images/team/repina-dt.jpg"
+                  alt="Ольга Репина"
+                />
+              </picture>
+
               <div class="name-card">
                 <h3 class="name-card__name">Ольга Репина</h3>
                 <p lang="en" class="name-card__title">Frontend Developer</p>
                 <ul class="social-list list">
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-instagram-2"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-linkedin-1"></use>
@@ -280,38 +395,61 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/tarasov.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/taras-dt.jpg    1x,
+                    ./images/team/taras-dt@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/taras-tb.jpg    1x,
+                    ./images/team/taras-tb@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/taras-mb.jpg    1x,
+                    ./images/team/taras-mb@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-list__image"
+                  src="./images/team/taras-dt.jpg"
+                  alt="Николай Тарасов"
+                />
+              </picture>
+
               <div class="name-card">
                 <h3 class="name-card__name">Николай Тарасов</h3>
                 <p lang="en" class="name-card__title">Marketing</p>
                 <ul class="social-list list">
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-instagram-2"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-linkedin-1"></use>
@@ -322,38 +460,61 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/yermakov.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/yermak-dt.jpg    1x,
+                    ./images/team/yermak-dt@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/yermak-tb.jpg    1x,
+                    ./images/team/yermak-tb@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/yermak-mb.jpg    1x,
+                    ./images/team/yermak-mb@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-list__image"
+                  src="./images/team/yermak-dt.jpg"
+                  alt="Михаил Ермаков"
+                />
+              </picture>
+
               <div class="name-card">
                 <h3 class="name-card__name">Михаил Ермаков</h3>
                 <p lang="en" class="name-card__title">UI Designer</p>
                 <ul class="social-list list">
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-instagram-2"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-list__item">
                     <a class="social-link social-link_light-theme link" href="">
                       <svg class="social-link__icon">
                         <use href="./images/icons.svg#icon-linkedin-1"></use>
@@ -441,28 +602,28 @@
         <div class="social-wrapper">
           <b class="join-text">ПРИСОЕДИНЯЙТЕСЬ</b>
           <ul class="social-list list">
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-instagram-2"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-twitter-1"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-facebook-1"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list__item">
               <a class="social-link social-link_dark-theme link" href="">
                 <svg class="social-link__icon">
                   <use href="./images/icons.svg#icon-linkedin-1"></use>
@@ -565,5 +726,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

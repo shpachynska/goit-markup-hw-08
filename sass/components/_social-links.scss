@@ -3,6 +3,11 @@
   justify-content: center;
   align-items: center;
 }
+.social-list__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
 
 .social-link {
   display: flex;
@@ -35,46 +40,8 @@
   }
 }
 
-// старый код целиком
-
 @media screen and (min-width: 1200px) {
   .social-list {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-
-  .social-link {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    // &:not(:last-child) {
-    //   margin-right: 10px;
-    // }
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      background-color: var(--accent-color);
-    }
-    &_light-theme {
-      color: #afb1b8;
-      fill: currentColor;
-      &:hover,
-      &:focus {
-        fill: var(--secondary-text-color);
-      }
-    }
-    &_dark-theme {
-      color: var(--secondary-text-color);
-      fill: currentColor;
-    }
-    &__icon {
-      width: 20px;
-      height: 20px;
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
   }
 }

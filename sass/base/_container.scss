@@ -2,43 +2,28 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  width: 480px;
+  .header & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 768px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
     .header & {
-      display: flex;
-      align-items: center;
+      justify-content: flex-end;
     }
     .footer & {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: baseline;
-      justify-content: space-between;
     }
   }
-}
-
-// старый код целиком
-
-@media screen and (min-width: 1200px) {
-  .container {
+  @media screen and (min-width: 1200px) {
     width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    .header & {
-      display: flex;
-      align-items: center;
-    }
+
     .footer & {
       display: flex;
       align-items: baseline;

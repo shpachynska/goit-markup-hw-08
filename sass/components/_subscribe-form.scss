@@ -1,9 +1,4 @@
 .subscribe-form {
-  display: flex;
-  flex-direction: column;
-  /* width: 570px; */
-  height: 86px;
-  margin-left: 93px;
 }
 
 .subscribe-form .button {
@@ -13,13 +8,15 @@
   width: 200px;
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
 }
 .icon-subscribe {
   fill: var(--secondary-text-color);
   margin-left: 10px;
 }
 .subscribe-wrapper__mail-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -29,6 +26,7 @@
   padding-left: 16px;
   background-color: transparent;
   margin-right: 12px;
+  margin-bottom: 20px;
   color: var(--secondary-text-color);
   &::placeholder {
     font-size: 16px;
@@ -38,6 +36,7 @@
 }
 .subscribe-form b {
   display: block;
+  text-align: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -47,10 +46,8 @@
 }
 
 .subscribe-wrapper {
-  display: flex;
+  display: block;
 }
-
-// старый код целиком
 
 @media screen and (min-width: 1200px) {
   .subscribe-form {
@@ -61,44 +58,13 @@
     margin-left: 93px;
   }
 
-  .subscribe-form .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
-  .icon-subscribe {
-    fill: var(--secondary-text-color);
-    margin-left: 10px;
-  }
   .subscribe-wrapper__mail-input {
     width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 16px;
-    background-color: transparent;
-    margin-right: 12px;
-    color: var(--secondary-text-color);
-    &::placeholder {
-      font-size: 16px;
-      line-height: 1.25;
-      color: rgba(255, 255, 255, 0.6);
-    }
+    margin-bottom: 0;
   }
+
   .subscribe-form b {
-    display: block;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--secondary-text-color);
-    margin-bottom: 20px;
+    text-align: left;
   }
 
   .subscribe-wrapper {

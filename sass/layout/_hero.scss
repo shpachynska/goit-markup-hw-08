@@ -1,19 +1,31 @@
 .hero {
+  min-width: 480px;
+
   &__overlay {
+    max-width: 1600px;
     background-color: var(--dark-background);
     text-align: center;
     padding: 118px 60px;
-    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero-img.jpg);
+      url(../images/hero/hero-mb.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero-mb@2x.jpg);
+    }
   }
   &__title {
     margin-right: auto;
@@ -28,52 +40,63 @@
     color: var(--secondary-text-color);
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    min-width: 768px;
-    .hero__overlay {
-      max-width: 768px;
-      padding-bottom: 118px;
-      padding-top: 118px;
-      height: 400px;
-    }
-    .hero__title {
-      margin-bottom: 30px;
-      font-size: 26px;
-      line-height: 1.36;
-      width: 360px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    min-width: 1200px;
-    .hero__overlay {
-      background-color: var(--dark-background);
-      text-align: center;
-      padding-bottom: 200px;
-      padding-top: 200px;
-      height: 600px;
-      margin-left: auto;
-      margin-right: auto;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-tb.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: linear-gradient(
+          to bottom,
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../images/hero-img.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+        url(../images/hero/hero-tb@2x.jpg);
+    }
+  }
+
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.36;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+
+    .hero__overlay {
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 200px;
+      padding-top: 200px;
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero-dt.jpg);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(../images/hero/hero-dt@2x.jpg);
+      }
     }
 
     .hero__title {
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 30px;
-      font-weight: 900;
       font-size: 44px;
       line-height: 1.36;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
       width: 696px;
-      color: var(--secondary-text-color);
     }
   }
 }
