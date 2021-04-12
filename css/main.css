@@ -184,6 +184,9 @@ body {
 }
 
 .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: 100;
   opacity: 0;
   visibility: hidden;
@@ -225,10 +228,6 @@ body {
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0) translateX(-50%);
-}
-
-.mobile-menu__list {
-  margin-bottom: 302px;
 }
 
 .mobile-menu__item:not(:last-child) {
