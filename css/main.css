@@ -948,6 +948,7 @@ body {
   font-size: 12px;
   line-height: 1.16;
   color: var(--main-text-color);
+  letter-spacing: 0.02em;
 }
 
 @media screen and (min-width: 1200px) {
