@@ -1,7 +1,8 @@
 .form {
-  width: 370px;
+  // width: 370px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .form-title {
@@ -16,7 +17,7 @@
 .form-field {
   position: relative;
   margin-bottom: 10px;
-  display: block;
+  display: flex;
   flex-direction: column;
   text-align: left;
   &__label {
@@ -28,7 +29,6 @@
     margin-bottom: 4px;
   }
   &__input {
-    width: 370px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -84,13 +84,14 @@
     color: var(--accent-color);
     font-size: 12px;
     line-height: 1.16;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
   }
 }
 
 .checkbox__text {
   font-size: 12px;
   line-height: 1.16;
+  letter-spacing: 0.01em;
   display: flex;
   color: var(--main-text-color);
   align-items: center;

@@ -101,6 +101,7 @@
 }
 .mobile-social-list {
   display: flex;
+  flex-wrap: wrap;
 }
 .mobile-social-list__link {
   color: var(--accent-color);
