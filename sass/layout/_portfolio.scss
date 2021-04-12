@@ -95,7 +95,7 @@ img {
       margin-bottom: 0;
       margin-left: 30px;
       margin-top: 30px;
-      flex-basis: calc(100% / 3 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
     }
     &__link {
       display: flex;
@@ -129,6 +129,7 @@ img {
     &__item {
       width: 370px;
       margin-bottom: 0;
+      flex-basis: calc(100% / 3 - 30px);
     }
   }
   .portfolio-overlay {

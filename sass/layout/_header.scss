@@ -88,6 +88,9 @@
 }
 .mobile-menu__tel {
   font-size: 34px;
+  @media screen and (max-width: 380px) {
+    font-size: 24px;
+  }
   color: var(--accent-color);
   margin-bottom: 32px;
 }
@@ -96,7 +99,10 @@
 }
 
 .mobile-menu__mail {
-  font-size: 34px;
+  font-size: 28px;
+  @media screen and (max-width: 380px) {
+    font-size: 24px;
+  }
   color: var(--main-text-color);
 }
 .mobile-social-list {

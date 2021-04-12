@@ -58,7 +58,7 @@
     &__item {
       margin-left: 30px;
       margin-top: 30px;
-      flex-basis: calc(100% / 4 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
     }
 
     &__image {
@@ -75,6 +75,7 @@
   }
 
   .team-list {
+    flex-wrap: nowrap;
     &__image {
       width: 270px;
       height: 260px;
